@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Template 002 | @rohit_virkud</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body{
+            background-color: #195165;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .swiper-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        }
+
+        .swiper-slide {
+        box-sizing: border-box;
+        color: transparent;
+        overflow: hidden;
+        }
+        .slide-01,.slide-02,.slide-03
+        {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 0;
+            background-color: #1D3138;
+           
+        }
+        .container
+        {
+            width: 80%;
+            height: 100%;
+           
+        }
+        .slideOnePattern
+        {
+            width: min(25.424vw,18vh);
+            height:min(50.847vw,35vh);
+            position: absolute;
+            top: auto;
+            bottom: 8%;
+            right: 0;
+            left: auto;
+        }
+        .logo
+        {
+            width: min(29.298vw,15vh);
+            height: min(13.801vw,7vh);
+            background: url('./logo.png') no-repeat;
+            background-size: contain;
+            margin-top:  min(13.801vw,7vh);
+           
+        }
+        .heading-name,.heading-sirname
+        {
+           
+            margin-top: min(10.169vw,5vh);
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 900;
+            font-size: min(6.78vw,4vh);
+            line-height: min(6.78vw,4vh);
+            width: 100%;
+            color: #FFFFFF;
+            
+        }
+        .heading-sirname
+        {
+            margin-top: min(1.695vw,0.8vh); 
+        }
+        .tag
+        {
+            margin-top: min(3.148vw,1.8vh); 
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 900;
+            font-size: min(2.906vw,1.5vh);
+            line-height: min(3.39vw,1.8vh);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+
+            color: #FFFFFF;
+
+        }
+        .line
+        {
+            margin-top: min(6.053vw,3.5vh);
+            width: min(35.835vw,18vh);
+            height: min(0.121vw,0.6vh);
+            left: min(10.896vw,6vh);
+            top: min(65.133vw,33vh);
+
+            background: #FFDFA1;
+        }
+        .contact-icon
+        {
+            width: min(6.78vw,4vh);
+            height: min(6.78vw,4vh);
+        }
+        .contact-container
+        {
+            margin-top: min(5.569vw,3.2vh);
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .cc-top
+        {
+            margin-top: min(10.291vw,5.5vh);
+        }
+        .contact-txt
+        {
+            margin-left: min(4.116vw,2.5vh);
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: min(3.39vw,1.8vh);
+            line-height:min(3.874vw,1.8vh);
+            width: 70%;
+            color: #FFFFFF;
+           
+        }
+        .primary-btn
+        {
+            padding-top: min(3.39vw,1.8vh);
+            padding-bottom:  min(3.39vw,1.8vh);
+            padding-left: min(3.668vw,1.8vh);
+            padding-right:  min(3.668vw,1.8vh);
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: min(3.405vw,1.8vh);
+            line-height: min(5.085vw,3vh);
+            color: #1D3138;;
+            background-color: #FFDFA1;
+            border-radius: min(0.852vw,0.4vh);
+        }
+        .share-btn
+        {
+            position: absolute;
+            width: min(10.896vw,6vh);
+            height:min(10.896vw,6vh);
+            top: 3%;
+            right: 6%;
+            left: auto;
+            bottom: auto;
+            
+
+        }
+
+        .share-btn img
+        {
+            width: min(10.896vw,6vh);
+            height:min(10.896vw,6vh);
+        }
+
+        .lottie-anim
+        {
+            position: fixed;
+            bottom: 1.5%;
+            /*left: min(8vw,5vh);*/
+            width: min(8vw,5vh);
+            height: min(8vw,5vh);
+        }
+        lottie-player
+        {
+            width:min(72.993vw,36vh);
+            height: min(72.993vw,36vh);
+        }
+
+        .firstSlideArrow
+        {
+            position:absolute;
+            Width:min(2.6vw,1.3vh);
+            Height:min(4.542vw,2.5vh);
+            top: auto;
+            bottom: 0.5%;
+            right: 6%;
+            left: auto;
+        }
+        .firstSlideArrow img
+        {
+            Width:min(2.6vw,1.3vh);
+            Height:min(4.542vw,2.5vh);
+            
+        }
+
+        .secondSlideArrow
+        {
+            position:absolute;
+            Width:min(2.6vw,1.3vh);
+            Height:min(4.542vw,2.5vh);
+            top: auto;
+            bottom: 0.5%;
+            left: 6%;
+            
+        }
+        .secondSlideArrow img
+        {
+            Width:min(2.6vw,1.3vh);
+            Height:min(4.542vw,2.5vh);
+            
+        }
+
+
+        /**/
+
+        .slide-02
+        {
+            background: linear-gradient(184.93deg, #3A6574 1.88%, #24424E 96.03%);
+        }
+        .image-container
+        {
+            
+            width: 100%;
+            height: min(50.121vw,30vh);
+            margin-top: min(12.833vw,7vh);
+            overflow: hidden;
+        }
+        .image
+        {
+            background: url('Image-02.png')no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: min(50.121vw,30vh);
+            transform: scale(1.5);
+            transition:  transform 5s ease-in-out;
+            
+        }
+
+        .zoomOut
+          {
+               transform: scale(1);
+          }
+    
+        .heading-name02
+        {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: min(7.264vw,3.5vh);
+            line-height: min(8.475vw,4.2vh);
+            margin-top: min(9.443vw, 4.8vh);
+            color: #FFFFFF;
+        }
+        .heading02-p{
+           
+            width: 100%;
+            color:#FFFFFF;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: min(3.632vw,1.8vh);
+            line-height: 163.15%;
+            margin-top: min(9.201vw,4.5vh);
+            
+            
+        }
+        .slide02pattern
+        {
+            position: absolute;
+            width: min(14.77vw,7.2vh);
+            height: min(29.782vw,15.2vh);
+            left: 0;
+            top: auto;
+            bottom: 4%; 
+        }
+        .slide02patternSmall
+        {
+            position: absolute;
+            width: min(15.254vw,7.5vh);
+            height: min(30.266vw,16vh);
+            right: 0;
+            left: auto;
+            top: 35%;
+            bottom: auto; 
+
+        }
+
+       
+          
+
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">  
+            <div class="swiper-slide">
+                <img src="./slide-01.png" alt="slide-01-pattern" class="slideOnePattern" />
+                <div class="slide-01">
+                    <div class="container">
+
+                        <div class="logo"></div>
+
+                        <a href="#!" class="share-btn">
+                            <img src="./share-icon.png"  alt="share" />
+                        </a>
+
+                        <h1 class="heading-name">Elena</h1>
+                        <h1 class="heading-sirname">Papadopoulou</h1>
+                        <p class="tag">REAL ESTATE CONSULTANT</p>
+
+                        <div class="line"></div>
+
+                        <a href="#!" class="contact-container cc-top">
+                            <img src="./phone-icon.png" alt="phone" class="contact-icon" />
+                            <p class="contact-txt">+30 6936503000</p>
+                        </a>
+
+                        <a href="#!" class="contact-container">
+                            <img src="./home-icon.png" alt="phone" class="contact-icon" />
+                            <p class="contact-txt">+30 2145256352</p>
+                        </a>
+
+                        <a href="#!" class="contact-container">
+                            <img src="./msg-icon.png" alt="phone" class="contact-icon" />
+                            <p class="contact-txt">info@artcoolcards.gr</p>
+                        </a>
+
+                        <a href="#!" class="contact-container">
+                            <img src="./location-icon.png" alt="phone" class="contact-icon" />
+                            <p class="contact-txt">Lisikratous 88, Kallithea, 176 74, Athens, Greece</p>
+                        </a>
+
+                        <a href="#!" class="contact-container" style="margin-bottom: min(12.107vw,6.5vh);">
+                            <img src="./web-icon.png" alt="phone" class="contact-icon" />
+                            <p class="contact-txt">www.artcoolcards.gr</p>
+                        </a>
+
+                        <a  href="#!" class="primary-btn">
+                            Save My Contacts
+                        </a> 
+
+                        <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_Sc0OC3.json"  
+                        background="transparent"  speed="1"  class="lottie-anim"  onclick="play2()"   
+                        loop  autoplay style="cursor: pointer;z-index: 999;"></lottie-player>
+
+
+                        <a href="#!" class="firstSlideArrow">
+                            <img src="./left-arrow.png" alt="left-arrow" class="swiper-button-next left-arrow" />
+                        </a>
+                        
+                    </div>
+                </div>
+            </div> <!-- Slide-01 --> 
+
+
+            <div class="swiper-slide">
+                  
+                <div class="slide-02">
+                    <img src="./slide2pattern.png" alt="slide-02" class="slide02pattern" /> 
+                    <img src="./slide2patternSmall.png" alt="slide-02" class="slide02patternSmall" /> 
+                    <div class="container">
+
+                       <div class="image-container">
+                           <div class="image"></div>
+                       </div>
+
+                       <h1 class="heading-name02">About Us</h1>
+
+                      <div class="vertical-slider">
+                            <p class="heading02-p">
+                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+
+                                Separated they live in Bookmark right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                            </p>
+                       </div>  
+                    </div> 
+
+                    <a href="#!" class="firstSlideArrow">
+                        <img src="./right-arrow.png" alt="left-arrow" class="swiper-button-next left-arrow" />
+                    </a>
+
+                    <a href="#!" class="secondSlideArrow">
+                        <img src="./left-arrow.png" alt="left-arrow" class="swiper-button-prev left-arrow" />
+                    </a>     
+                </div>    
+            </div>
+
+
+            <div class="swiper-slide">
+                <div class="slide-03">
+                    <div class="container">
+
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+
+
+        </div> <!-- slider wrapper -->  
+    </div> <!-- slider container -->  
+      
+    
+     <!-- swiper js  ----> 
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+      speed: 1200,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    });
+
+
+    /*image zoom in animations*/
+    var test = setInterval(function(){ 
+        if(swiper.activeIndex == 1)
+            {
+                $(".image").addClass("zoomOut");      
+            }else{
+                $(".image").removeClass("zoomOut"); 
+            };
+        },1000);        
+    </script>      
+    
+
+
+</body>
+</html>
