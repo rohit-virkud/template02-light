@@ -644,6 +644,14 @@ a{
          filter: brightness(0.5) invert(0.005);
          
        } */
+	  
+	    
+     .swiper-container,.swiper-slide
+{
+  overflow-y: scroll;
+  overflow-x: hidden;
+   
+}
     
 
 
@@ -676,6 +684,9 @@ a{
   <div class="swiper-wrapper">
    
     <div class="swiper-slide">
+	      <audio id="audio">
+            <source src="intro.mpeg" type="audio/mpeg">
+          </audio>
         <!-- <div class="overlay"></div> -->
       <div class="slide-inner">
 
@@ -745,9 +756,9 @@ a{
       
     </div>
     
-    <div class="swiper-slide">
+    <div class="swiper-slide" style="background: #E8E4D9;">
         
-      <div class="slide-inner" style=" background: linear-gradient(184.93deg, #3A6574 1.88%, #24424E 96.03%);">
+      <div class="slide-inner" >
         <div class="slide-02">
             <img src="./slide2pattern.png" alt="slide-02" class="slide02pattern" /> 
             <img src="./slide2patternSmall.png" alt="slide-02" class="slide02patternSmall" /> 
@@ -1000,6 +1011,23 @@ setInterval(function(){
     $(".qr-code-container").removeClass("open").delay(500);
     $(".close-icon").addClass("closeAnim").delay(1000);
     }
+	
+    function play2() { 
+        
+        var audioElement = document.getElementById("audio");
+            
+            if (audioElement.paused) {
+                    /* Audio link for notification */ 
+                audioElement.play(); 
+                
+            }
+            else {
+                
+                audioElement.pause(); 
+                
+            }
+
+    } 
 
     
        
