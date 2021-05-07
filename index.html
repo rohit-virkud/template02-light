@@ -116,7 +116,7 @@ a{
             line-height: min(3.39vw,1.8vh);
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            color:#34413B;
+           
 
         }
         .line
@@ -203,8 +203,8 @@ a{
             position: fixed;
             bottom: 1.5%;
             /*left: min(8vw,5vh);*/
-            width: min(8vw,5vh);
-            height: min(8vw,5vh);
+            width: min(8vw,6vh);
+            height: min(8vw,6vh);
         }
         lottie-player
         {
@@ -281,7 +281,9 @@ a{
             font-weight: normal;
             font-size: min(3.632vw,1.8vh);
             line-height: 163.15%;
+            height: 800px;
             margin-top: min(9.201vw,4.5vh);
+           
             
             
         }
@@ -637,22 +639,75 @@ a{
             0% { box-shadow: 0 0 0 0  #ffe0a142; }
             }*/
 
-       
+        /* footer */
+		.footer
+		{
+           
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+	
+			padding-top: min(2vw,1.5vh);
+			padding-bottom: min(2vw,1.5vh);
+			background-color: transparent;
+            
+		}
+		.footer-img-container
+		{
+            width: min(15vw,7.5vh);
+			height: min(15vw,7.5vh);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.footer .footer-img-container img{
+			max-height: 100%;
+			max-width: 100%;
+			object-fit: contain;
+		}
+        .swiper-slide
+        {
+            transition:  transform 1s ease-out;
+        }
       /* .swiper-slide-prev
        {
        
-         filter: brightness(0.5) invert(0.005);
+         filter: brightness(0.5) invert(0.001);
+         transition:  transform 0.5s all;
          
-       } */
-	  
-	    
-     .swiper-container,.swiper-slide
-{
-  overflow-y: scroll;
-  overflow-x: hidden;
+       }*/
+
+       .swiper-slide
+       {
+           overflow-y: scroll;
+           overflow-x: hidden;
+       }
    
+       .body::-webkit-scrollbar {
+  display: none;
 }
+       .body,.slide-02{
+       scrollbar-width: none;
+       }
+
+
+       .overlaywrapper1,.overlaywrapper2,.overlaywrapper3,.overlaywrapper4
+       {
+           transition: 1s ease-out;
+       }
     
+
+       .overlay
+       {
+           position: absolute;
+           top: 0;
+           left: 0;
+           z-index:999;
+           width: 100%;
+           height: 100vh;
+           background:rgba(0, 0, 0, 0.50);
+       }
 
 
   </style>
@@ -683,11 +738,11 @@ a{
 <div class="swiper-container">
   <div class="swiper-wrapper">
    
-    <div class="swiper-slide">
-	      <audio id="audio">
+    <div class="swiper-slide s1">
+        <audio id="audio">
             <source src="intro.mpeg" type="audio/mpeg">
           </audio>
-        <!-- <div class="overlay"></div> -->
+      <div class="overlaywrapper1"></div>
       <div class="slide-inner">
 
         <img src="./slide-01.png" alt="slide-01-pattern" class="slideOnePattern" />
@@ -702,7 +757,11 @@ a{
 
                 <h1 class="heading-name" data-swiper-parallax="-300">Elena</h1>
                 <h1 class="heading-sirname" data-swiper-parallax="-300">Papadopoulou</h1>
-                <p class="tag" data-swiper-parallax="-300">REAL ESTATE CONSULTANT</p>
+                <p 
+                class="tag" 
+                
+                data-swiper-parallax="-300"
+                >REAL ESTATE CONSULTANT</p>
 
                 <div class="line" data-swiper-parallax="-250"></div>
 
@@ -738,9 +797,10 @@ a{
                     Save My Contacts
                 </a> 
 
-                <lottie-player src="hj.json"  
+                <lottie-player src="https://raw.githubusercontent.com/rohit-virkud/template02-light/main/hj.json"  
                 background="transparent"  speed="1"  class="lottie-anim"  onclick="play2()"   
-                loop  autoplay style="cursor: pointer;z-index: 999;"  data-swiper-parallax="-250"></lottie-player>
+                loop  autoplay style="cursor: pointer;z-index: 999; stroke: black;
+                  "  data-swiper-parallax="-250"></lottie-player>
 
 
                 <a href="#!" class="firstSlideArrow" data-swiper-parallax="-250">
@@ -756,9 +816,9 @@ a{
       
     </div>
     
-    <div class="swiper-slide" style="background: #E8E4D9;">
-        
-      <div class="slide-inner" >
+    <div class="swiper-slide s2" style="background: #E8E4D9;">
+        <div class="overlaywrapper2"></div>
+      <div class="slide-inner" style=" background: linear-gradient(184.93deg, #3A6574 1.88%, #24424E 96.03%);">
         <div class="slide-02">
             <img src="./slide2pattern.png" alt="slide-02" class="slide02pattern" /> 
             <img src="./slide2patternSmall.png" alt="slide-02" class="slide02patternSmall" /> 
@@ -776,6 +836,16 @@ a{
 
                         Separated they live in Bookmark right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.
                         Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+
+                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+
+                        Separated they live in Bookmark right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+
+
+
+                       
+
                     </p>
                </div>  
             </div> 
@@ -790,7 +860,8 @@ a{
         </div>    
       </div> <!--end of inner two --->
     </div>
-    <div class="swiper-slide">
+    <div class="swiper-slide s3">
+        <div class="overlaywrapper3"></div>
       <div class="slide-inner">
       
         <div class="slide-03" style=" background: #1D3138">
@@ -858,7 +929,8 @@ a{
 
       </div>
     </div>
-    <div class="swiper-slide">
+    <div class="swiper-slide s4">
+        <div class="overlaywrapper4"></div>
       <div class="slide-inner slide-04">
         <h1 class="heading-name" style="margin-top: min(16vw,8vh);margin-left:min(8vw,4vh);color: #000000" data-swiper-parallax="-300">Subscribe</h1>
         <form method="post" class="form" style="margin-top: min(4vw,3vh);margin-left:min(8vw,4vh)" data-swiper-parallax="-300">
@@ -900,6 +972,11 @@ a{
         </div>  <!-- info container close -->
 
 
+        <div class="footer">
+            <a class="footer-img-container">
+              <img src="logo.png">
+            </a>
+        </div>
 	
 
         <a href="#!" class="secondSlideArrow" data-swiper-parallax="-250">
@@ -917,7 +994,6 @@ a{
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js'></script>
 <script>
-var interleaveOffset = 0.5;
 
 var swiperOptions = {
   speed: 1000,
@@ -958,6 +1034,8 @@ var swiperOptions = {
     },
     setTransition: function(speed) {
       var swiper = this;
+      console.log(speed);
+
       for (var i = 0; i < swiper.slides.length; i++) {
         swiper.slides[i].style.transition = speed + "ms";
         swiper.slides[i].querySelector(".slide-inner").style.transition =
@@ -982,17 +1060,52 @@ setInterval(function(){
             $(".image").removeClass("zoomOut");      
         }  
 
-        if ($(".swiper-slide").hasClass("swiper-slide-prev")) 
-        {
 
-            $(".overlaywrap").addClass('overlay');
+
+        
+
+        if ($(".s1").hasClass("swiper-slide-prev")) 
+            {
+
+            $(".overlaywrapper1").addClass('overlay');
                         
-        }else{
-            $(".overlaywrap").removeClass('overlay');
-        } 
+            }else{
+            $(".overlaywrapper1").removeClass('overlay');
+            } 
+    
+         if ($(".s2").hasClass("swiper-slide-prev")) 
+            {
+
+            $(".overlaywrapper2").addClass('overlay');
+                        
+            }else{
+            $(".overlaywrapper2").removeClass('overlay');
+            } 
+        
+        if ($(".s3").hasClass("swiper-slide-prev")) 
+            {
+
+            $(".overlaywrapper3").addClass('overlay');
+                        
+            }else{
+            $(".overlaywrapper3").removeClass('overlay');
+            }
+
+        if ($(".s4").hasClass("swiper-slide-prev")) 
+            {
+
+            $(".overlaywrapper4").addClass('overlay');
+                        
+            }else{
+            $(".overlaywrapper4").removeClass('overlay');
+            } 
+
+        
         
     },500);
 
+   
+    console.log(e[1]);
 
     function openSlide() {
     $(".share-slide").addClass("open")
@@ -1011,7 +1124,8 @@ setInterval(function(){
     $(".qr-code-container").removeClass("open").delay(500);
     $(".close-icon").addClass("closeAnim").delay(1000);
     }
-	
+
+
     function play2() { 
         
         var audioElement = document.getElementById("audio");
@@ -1028,7 +1142,6 @@ setInterval(function(){
             }
 
     } 
-
     
        
    
