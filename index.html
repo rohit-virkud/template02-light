@@ -691,7 +691,8 @@ a{
        scrollbar-width: none;
        }
 
- .overlaywrapper1,.overlaywrapper2,.overlaywrapper3,.overlaywrapper4
+
+       .overlaywrapper1,.overlaywrapper2,.overlaywrapper3,.overlaywrapper4
        {
         position: absolute;
            top: 0;
@@ -699,7 +700,8 @@ a{
         width: 100%;
         height: 100vh;
         z-index:-999;
-        transition: all 1s ease-in;
+        opacity: 1;
+        transition: 0.5s all ease-out;
        }
     
 
@@ -707,9 +709,9 @@ a{
        {
            
            z-index:999;
-           
            background:rgba(0, 0, 0, 0.50);
        }
+
 
   </style>
 
@@ -743,11 +745,12 @@ a{
         <audio id="audio">
             <source src="intro.mpeg" type="audio/mpeg">
           </audio>
-      <div class="overlaywrapper1"></div>
+      
       <div class="slide-inner">
 
         <img src="./slide-01.png" alt="slide-01-pattern" class="slideOnePattern" />
         <div class="slide-01">
+            <div class="overlaywrapper1"></div>
             <div class="container">
 
                 <div class="logo" data-swiper-parallax="-300"></div>
@@ -818,9 +821,10 @@ a{
     </div>
     
     <div class="swiper-slide s2" style="background: #E8E4D9;">
-        <div class="overlaywrapper2"></div>
+        
       <div class="slide-inner" style=" background: linear-gradient(184.93deg, #3A6574 1.88%, #24424E 96.03%);">
         <div class="slide-02">
+            <div class="overlaywrapper2"></div>
             <img src="./slide2pattern.png" alt="slide-02" class="slide02pattern" /> 
             <img src="./slide2patternSmall.png" alt="slide-02" class="slide02patternSmall" /> 
             <div class="container">
@@ -842,9 +846,6 @@ a{
 
                         Separated they live in Bookmark right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.
                         Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-
-
-
                        
 
                     </p>
@@ -862,10 +863,11 @@ a{
       </div> <!--end of inner two --->
     </div>
     <div class="swiper-slide s3">
-        <div class="overlaywrapper3"></div>
+       
       <div class="slide-inner">
       
         <div class="slide-03" style=" background: #1D3138">
+             <div class="overlaywrapper3"></div>
             <img src="./slide-03-light.png" alt="slide-03" class="slideOnePattern" />
             <div class="container-03">
                 <h1 class="heading-name" style="margin-top: min(16vw,8vh);color: #000000;" data-swiper-parallax="-300">Gallery</h1>
@@ -931,8 +933,9 @@ a{
       </div>
     </div>
     <div class="swiper-slide s4">
-        <div class="overlaywrapper4"></div>
+        
       <div class="slide-inner slide-04">
+        <div class="overlaywrapper4"></div>
         <h1 class="heading-name" style="margin-top: min(16vw,8vh);margin-left:min(8vw,4vh);color: #000000" data-swiper-parallax="-300">Subscribe</h1>
         <form method="post" class="form" style="margin-top: min(4vw,3vh);margin-left:min(8vw,4vh)" data-swiper-parallax="-300">
             <input type="name" name="name" placeholder="Enter Your Name"  class="input"/>
@@ -1106,7 +1109,7 @@ setInterval(function(){
     },500);
 
    
-    console.log(e[1]);
+
 
     function openSlide() {
     $(".share-slide").addClass("open")
